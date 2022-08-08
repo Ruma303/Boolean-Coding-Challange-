@@ -1,0 +1,105 @@
+/* ho trovato questi comandi per scalare l'immagine a schermo intero */
+.background-img { background-image: url(background.jpg);
+    background-repeat: no-repeat;
+background-position: 0 0;
+-moz-background-size: cover;
+-webkit-background-size: cover;
+background-size: cover;}
+
+/* devo capire come evitare che tutto diventi opaco.
+RISOLTO! non usare la proprietà Opacity perchè fa ereditare il valore a tutti i tag sotto, ma usa l'rgba: (red, green, blue, alfa) dvoe alfa è l'opacità che non è ereditiera in questo caso, ma è solo del selettore */
+
+.box { margin: 30px 350px;
+    border-radius: 15px 15px 15px 15px; 
+    background-color: rgba(0,0,0,0.5);
+    height: 850px;
+}
+
+header > img {
+     display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0px;
+  width: 260px;
+  padding-top: 95px;
+}
+    
+/* non ho trovato il font adatto, il calibri ci arrivava vicino. Ho provato a cercarlo con google fonts e whatthefont ma l'editor non carica quelli che mi sembrano simli :(*/
+h1 { color: lime;
+    text-align: center;
+    margin: 10px;
+    font-size: 40px;
+font-family: Calibri;}
+
+header > div {
+    background-color: lime;
+    height: 25px;
+    margin: 0px 100px;
+    padding: 10px;
+    text-align: center;
+}
+
+button {
+  margin: 3px;
+}
+
+main {
+    margin: 20px 100px;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+section {
+    line-height: 27px;
+}
+
+.utenti {
+    font-size: 30px;}
+
+.utenti:before{
+    content: "Monopattino ";
+}
+
+/* unisco le righe/classi con lo stesso font e dimensione font */
+div > span, .via, .metri, .carica {
+    font-size: 18px;
+    font-family: Arial;
+}
+
+.via:before{
+    content: "\21A6";
+}
+
+.via:after {
+    content: "- a ";
+}
+
+.metri:after {
+    content: "metri da te";
+}
+
+.carica:after {
+    content: "Stato carica:";
+}
+
+/* per i colori mi sono servito di powertoys */
+#gino {
+    border-radius: 5px 5px 5px 5px; 
+    background-color: rgb(241, 177, 92);
+    height: 30px;
+    width: 350px;
+}
+
+#mike {
+    border-radius: 5px 5px 5px 5px; 
+    background-color: rgb(0, 196, 54);
+    height: 30px;
+    width: 600px;
+}
+
+#fede {
+    border-radius: 5px 5px 5px 5px; 
+    background-color: rgb(185, 68, 68);
+    height: 30px;
+    width: 180px;
+}
